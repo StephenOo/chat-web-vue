@@ -23,6 +23,15 @@ tailwindcss
 npm install tailwindcss @tailwindcss/vite
 ```
 
+shadcn-vue
+```shell
+npx shadcn-vue@latest init
+```
+
+```shell
+npx shadcn-vue@latest add button
+```
+
 markdown显示
 ```sh
 npm install marked

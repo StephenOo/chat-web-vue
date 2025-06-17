@@ -1,8 +1,12 @@
 <script setup lang="ts">
+import { Button } from '@/components/ui/button'
 </script>
 
 <template>
-  <main>
+  <div class="h-full p-10">
     <h3 class="text-2xl font-bold "> hello </h3>
-  </main>
+    <Button>send</Button>
+    <Button variant="outline">click</Button>
+    <Button variant="ghost">ghost</Button>
+  </div>
 </template>
