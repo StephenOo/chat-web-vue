@@ -5,8 +5,10 @@ import ThemeToggle from '@/components/ThemeToggle.vue'
 
 <template>
   <div class="p-10 flex gap-2">
-    <h3 class="text-2xl font-bold "> hello </h3>
+    <h3 class="text-2xl font-bold">Test</h3>
     <Button>send</Button>
-
+    <Button variant="outline">click</Button>
+    <Button variant="ghost">ghost</Button>
+    <ThemeToggle />
   </div>
 </template>

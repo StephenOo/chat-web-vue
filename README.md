@@ -29,7 +29,13 @@ npx shadcn-vue@latest init
 ```
 
 ```shell
-npx shadcn-vue@latest add button
+npx shadcn-vue@latest add dropdown-menu
+```
+
+Dark mode
+```shell
+npm install @vueuse/core
+npm install -D @iconify/vue @iconify-json/radix-icons
 ```
 
 markdown显示
