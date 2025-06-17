@@ -18,7 +18,10 @@ npm run dev
 npm run build
 ```
 
-
+tailwindcss
+```shell
+npm install tailwindcss @tailwindcss/vite
+```
 
 markdown显示
 ```sh
