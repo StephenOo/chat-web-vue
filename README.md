@@ -32,10 +32,19 @@ npx shadcn-vue@latest init
 npx shadcn-vue@latest add dropdown-menu
 ```
 
+```shell
+npx shadcn-vue@latest add Login01
+```
+
+Icon
+https://icon-sets.iconify.design/
+```shell
+npm install -D @iconify/vue @iconify-json/radix-icons
+```
+
 Dark mode
 ```shell
 npm install @vueuse/core
-npm install -D @iconify/vue @iconify-json/radix-icons
 ```
 
 
