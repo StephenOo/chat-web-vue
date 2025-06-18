@@ -28,10 +28,12 @@ export default defineConfig({
     proxy: {
       '^/dev/dwc/api/sse/.*': {  // 拦截规则
         target: 'http://localhost:9500',   // 后端本地地址
+        changeOrigin: true,               // 是否允许跨域
         rewrite: (path) => path.replace(/^\/dev\/dwc\/api\/sse/, '')
       },
       '/dev/dwc/api': {  // 拦截规则
         target: 'http://localhost:9500',   // 后端本地地址
+        changeOrigin: true,               // 是否允许跨域
         rewrite: (path) => path.replace(/^\/dev\/dwc\/api/, '')  // 重写路径，去除/dev/dwc/api前缀
       },
 

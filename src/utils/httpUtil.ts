@@ -22,7 +22,7 @@ httpInstance.interceptors.request.use(
         const token = userStore.loginUser.token
         if (token) {
             //console.log(`token : ${token}`)
-            config.headers['token'] = token
+            config.headers['Authorization'] = `Bearer ${token}`
         }
         return config
     },
@@ -38,7 +38,7 @@ httpInstance.interceptors.request.use(
 httpInstance.interceptors.response.use(
     // 成功返回
     resp => {
-         //console.log(`response: ${JSON.stringify(res.data)}`)
+        // console.log(`response: ${JSON.stringify(resp.data)}`)
         if (resp.data.code === 401) {
             const userStore = useUserStore()
             userStore.clearUserInfo()

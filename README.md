@@ -29,7 +29,7 @@ npx shadcn-vue@latest init
 ```
 
 ```shell
-npx shadcn-vue@latest add dropdown-menu
+npx shadcn-vue@latest add sonner 
 ```
 
 ```shell
