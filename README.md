@@ -29,12 +29,9 @@ npx shadcn-vue@latest init
 ```
 
 ```shell
-npx shadcn-vue@latest add sonner 
+npx shadcn-vue@latest add Sidebar07
 ```
 
-```shell
-npx shadcn-vue@latest add Login01
-```
 
 Icon
 https://icon-sets.iconify.design/
