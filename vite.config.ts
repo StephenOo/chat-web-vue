@@ -26,13 +26,13 @@ export default defineConfig({
     open: true,          // 启动后是否自动打开浏览器
     // 配置代理
     proxy: {
-      '^/dwc/api/sse/.*': {  // 拦截规则
+      '^/dev/dwc/api/sse/.*': {  // 拦截规则
         target: 'http://localhost:9500',   // 后端本地地址
-        rewrite: (path) => path.replace(/^\/dwc\/api\/sse/, '')
+        rewrite: (path) => path.replace(/^\/dev\/dwc\/api\/sse/, '')
       },
-      '/dwc/api': {  // 拦截规则
+      '/dev/dwc/api': {  // 拦截规则
         target: 'http://localhost:9500',   // 后端本地地址
-        rewrite: (path) => path.replace(/^\/dwc\/api/, '')  // 重写路径，去除/dwc/api前缀
+        rewrite: (path) => path.replace(/^\/dev\/dwc\/api/, '')  // 重写路径，去除/dev/dwc/api前缀
       },
 
     }

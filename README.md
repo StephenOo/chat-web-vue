@@ -38,6 +38,12 @@ npm install @vueuse/core
 npm install -D @iconify/vue @iconify-json/radix-icons
 ```
 
+
+Pinia 的持久化存储插件
+```shell
+npm install pinia-plugin-persistedstate
+```
+
 markdown显示
 ```sh
 npm install marked
