@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import { useAuth } from '@/composables/useAuth.ts'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -47,6 +48,17 @@ const router = createRouter({
       component: () => import('@/views/test/Test.vue'),
     },
   ],
+})
+
+router.beforeEach(async (to, from, next) => {
+  const publicPages = ['/login', '/test','/error/404']
+  const {isLogin} = useAuth()
+
+  if (!publicPages.includes(to.path) && !isLogin) {
+    return next('/login')
+  }
+
+  next()
 })
 
 export default router

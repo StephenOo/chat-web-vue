@@ -6,36 +6,33 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { useRouter } from 'vue-router'
-import { useUserStore } from '@/stores/userStore'
 import { toast } from 'vue-sonner'
+import { useAuth } from '@/composables/useAuth.ts'
 
 const props = defineProps<{
   class?: HTMLAttributes['class']
 }>()
 
 const router = useRouter()
-const userStore = useUserStore()
+const {login} = useAuth()
 
 const loading = ref<boolean>(false)
+const username = ref<string>('')
+const password = ref<string>('')
+
 
 // 执行登录操作
-const handleSubmit = async (e: Event) => {
-  e.preventDefault()
-  const form = e.target as HTMLFormElement
-  const formData = new FormData(form)
-  const username = formData.get('username') as string
-  const password = formData.get('password') as string
+const onLogin = async (e: Event) => {
 
   try {
     loading.value = true
-    await userStore.getUserInfo({ username, password })
+    const user = await login( username.value, password.value )
 
-    if (userStore.isLogin()) {
-      console.log('登录成功')
+    if (user) {
+      console.log('登录成功，跳转首页')
       router.push('/')
     } else {
       console.log('登录失败')
-      toast.error('登录失败')
     }
   } catch (e) {
     console.error('登录失败:', e)
@@ -55,11 +52,11 @@ const handleSubmit = async (e: Event) => {
         <CardTitle class="text-center text-xl"> 登录到 Dw Chat Vue </CardTitle>
       </CardHeader>
       <CardContent>
-        <form @submit.prevent="handleSubmit">
+        <form @submit.prevent="onLogin">
           <div class="flex flex-col gap-6">
             <div class="grid gap-3">
               <Label for="username">用户名</Label>
-              <Input id="username" type="text" name="username" placeholder="dawei" required />
+              <Input v-model="username" placeholder="dawei" required />
             </div>
             <div class="grid gap-3">
               <div class="flex items-center">
@@ -68,7 +65,7 @@ const handleSubmit = async (e: Event) => {
                   忘记密码？
                 </a>
               </div>
-              <Input id="password" type="password" name="password" placeholder="123456" required />
+              <Input  v-model="password" type="password" placeholder="123456" required />
             </div>
             <div class="flex flex-col gap-3">
               <Button
