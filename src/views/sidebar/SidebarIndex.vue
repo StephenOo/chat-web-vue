@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { Button } from '@/components/ui/button'
 import { useAuth } from '@/composables/useAuth.ts'
+import Logo from '@/components/sidebar/Logo.vue'
 const {logout} = useAuth()
 
 </script>
@@ -11,6 +12,8 @@ const {logout} = useAuth()
   <Button @click="async () => { await logout()}">
     退出
   </Button>
+
+  <Logo/>
 </div>
 </template>
 

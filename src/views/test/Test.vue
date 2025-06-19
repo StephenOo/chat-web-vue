@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Button } from '@/components/ui/button'
-import ThemeToggle from '@/components/ThemeToggle.vue'
+import ThemeToggle from '@/components/sidebar/ThemeToggle.vue'
 </script>
 
 <template>

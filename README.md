@@ -29,7 +29,7 @@ npx shadcn-vue@latest init
 ```
 
 ```shell
-npx shadcn-vue@latest add Sidebar07
+npx shadcn-vue@latest add dialog
 ```
 
 
