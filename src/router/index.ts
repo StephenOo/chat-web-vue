@@ -10,15 +10,15 @@ const router = createRouter({
       name: 'home',
       component: () => import('../views/HomeLayout.vue'),
       children: [
-        /*{
+        {
           path: '',
-          name: 'home',
-          component: () => import('../views/layout/HomeIndex.vue')
-        },*/
+          name: 'ChatHome',
+          component: () => import('../views/chat/ChatHome.vue')
+        },
         {
           path: '/chat/:chatId',
-          name: 'chat',
-          component: () => import('../views/chat/ChatLayout.vue'),
+          name: 'ChatIndex',
+          component: () => import('../views/chat/ChatIndex.vue'),
         },
       ],
     },

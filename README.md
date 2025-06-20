@@ -24,12 +24,13 @@ npm install tailwindcss @tailwindcss/vite
 ```
 
 shadcn-vue
+https://www.shadcn-vue.com/
 ```shell
 npx shadcn-vue@latest init
 ```
 
 ```shell
-npx shadcn-vue@latest add dialog
+npx shadcn-vue@latest add tooltip
 ```
 
 
@@ -65,4 +66,12 @@ fetch-event-source
 npm install @microsoft/fetch-event-source
 ```
 
+动画
+```shell
+npm install @vueuse/motion
+```
 
+雪花算法
+```shell
+npm install snowflake-uid --save
+```

@@ -5,7 +5,7 @@ import 'vue-sonner/style.css' // vue-sonner v2 requires this import
 </script>
 
 <template>
-  <div class="min-h-screen bg-background text-foreground" >
+  <div class="bg-background text-foreground" >
     <Toaster position='top-center' class="pointer-events-auto"/>
     <RouterView />
   </div>

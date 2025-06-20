@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import type { HTMLAttributes } from 'vue'
-import { PanelLeft, PanelLeftClose, PanelLeftOpen } from 'lucide-vue-next'
+import { PanelLeftClose, PanelLeftOpen } from 'lucide-vue-next'
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/button'
 import { useSidebar } from '@/components/ui/sidebar'
-import { Tooltip } from '@/components/ui/tooltip'
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 
 const props = defineProps<{
   class?: HTMLAttributes['class']
@@ -26,10 +26,16 @@ const { open, toggleSidebar } = useSidebar()
           @click="toggleSidebar"
         >
           <template v-if="open">
-            <PanelLeftClose class="text-muted-foreground" />
+            <PanelLeftClose
+              class="text-muted-foreground"
+              :style="{ width: '20px', height: '20px' }"
+            />
           </template>
           <template v-else>
-            <PanelLeftOpen class="text-muted-foreground" />
+            <PanelLeftOpen
+              class="text-muted-foreground h-7 w-7"
+              :style="{ width: '20px', height: '20px' }"
+            />
           </template>
           <span class="sr-only">Toggle Sidebar</span>
         </Button>

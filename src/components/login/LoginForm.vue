@@ -15,6 +15,7 @@ const props = defineProps<{
 
 const router = useRouter()
 const {login} = useAuth()
+const appName = import.meta.env.VITE_APP_NAME
 
 const loading = ref<boolean>(false)
 const username = ref<string>('')
@@ -49,7 +50,7 @@ const onLogin = async (e: Event) => {
   <div :class="cn('flex flex-col gap-6', props.class)">
     <Card>
       <CardHeader>
-        <CardTitle class="text-center text-xl"> 登录到 Dw Chat Vue </CardTitle>
+        <CardTitle class="text-center text-xl"> 登录到 {{appName}} </CardTitle>
       </CardHeader>
       <CardContent>
         <form @submit.prevent="onLogin">

@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import ChatSidebar from '@/components/sidebar/ChatSidebar.vue'
+import Chat from '@/components/chat/Chat.vue'
+
 </script>
 
 <template>
-  <ChatSidebar/>
+  <Chat/>
 </template>
 
 <style scoped>

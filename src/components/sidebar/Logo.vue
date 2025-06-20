@@ -3,6 +3,7 @@ import { useSidebar } from '@/components/ui/sidebar'
 import { Avatar, AvatarImage } from '@/components/ui/avatar'
 
 const { open } = useSidebar()
+const appName = import.meta.env.VITE_APP_NAME
 </script>
 
 <template>
@@ -12,10 +13,8 @@ const { open } = useSidebar()
         <AvatarImage src="src/assets/logo.svg" alt="dw" />
       </Avatar>
       <template v-if="open">
-        <span
-          class="dark:invert text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-500"
-        >
-          Dw Chat Vue
+        <span class="dark:invert text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-500">
+          {{appName}}
         </span>
       </template>
     </div>

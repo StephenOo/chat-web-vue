@@ -7,9 +7,7 @@ import ChatSidebar from '@/components/sidebar/ChatSidebar.vue'
 
 <template>
   <SidebarProvider>
-<!--    <div class="text-center">layout</div>
-    <SidebarIndex/>-->
-    <ChatSidebar/>
+    <SidebarIndex/>
 
     <SidebarInset>
       <RouterView/>
