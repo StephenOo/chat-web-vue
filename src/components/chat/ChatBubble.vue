@@ -76,8 +76,8 @@ const onHandelDisLike = () => {
   <!-- 用户提问气泡 -->
   <template v-if="isUser">
     <div class="flex justify-end mb-4">
-      <div class="max-w-[75%] bg-secondary text-secondary-foreground rounded-lg p-2">
-        <span class="text-sm">{{content}}</span>
+      <div class="max-w-[75%] bg-secondary text-secondary-foreground rounded-lg py-2 px-4">
+        <span class="text-sm/6">{{content}}</span>
       </div>
     </div>
   </template>
@@ -109,12 +109,12 @@ const onHandelDisLike = () => {
             <ChevronDown v-else :size="16" class="ml-2" />
           </Button>
           <div v-if="openReasoning" class="text-sm border-l-2 my-2 mr-2 pl-4 text-muted-foreground">
-            <span class="text-sm">{{reasoningContent}}</span>
+            <span class="text-sm/6">{{reasoningContent}}</span>
           </div>
         </div>
 
         <!-- 回答内容  -->
-        <div v-if="content" class="border-1 rounded-lg p-3 text-sm">
+        <div v-if="content" class="border-1 rounded-lg p-3 text-sm/6">
           <div class=" markdown-css" v-html="markdownContent(content)" />
         </div>
 
@@ -129,7 +129,7 @@ const onHandelDisLike = () => {
               <Button
                 variant="ghost"
                 size="icon"
-                class="h-6 w-6 cursor-pointer"
+                class="h-7 w-7 cursor-pointer"
                 @click="onHandleCopy"
               >
                 <Copy :size="14" />
@@ -146,7 +146,7 @@ const onHandelDisLike = () => {
               <Button
                 variant="ghost"
                 size="icon"
-                class="h-6 w-6 cursor-pointer"
+                class="h-7 w-7 cursor-pointer"
                 @click="onHandelLike"
               >
                 <ThumbsUp v-if="vote === 'up'" :size="14" fill="gray" />
@@ -164,7 +164,7 @@ const onHandelDisLike = () => {
               <Button
                 variant="ghost"
                 size="icon"
-                class="h-6 w-6 cursor-pointer"
+                class="h-7 w-7 cursor-pointer"
                 @click="onHandelDisLike"
               >
                 <ThumbsDown v-if="vote === 'down'" :size="14" fill="gray" />

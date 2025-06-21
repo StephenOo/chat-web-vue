@@ -42,7 +42,7 @@ watch(
 </script>
 
 <template>
-  <ScrollArea class="h-14/15 w-full my-2">
+  <ScrollArea class="h-[calc(100%_-_170px)] w-full my-2 mb-auto">
     <div class="h-full max-w-2xl  mx-auto space-y-4">
       <ChatBubble
         v-for="(item, index) in messages"

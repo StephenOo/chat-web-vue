@@ -30,7 +30,7 @@ npx shadcn-vue@latest init
 ```
 
 ```shell
-npx shadcn-vue@latest add tooltip
+npx shadcn-vue@latest add textarea
 ```
 
 

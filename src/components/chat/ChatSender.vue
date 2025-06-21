@@ -25,6 +25,7 @@ import {
   DropdownMenuTrigger
 } from '@/components/ui/dropdown-menu';
 import { Button } from '@/components/ui/button'
+import { Textarea } from '@/components/ui/textarea'
 
 
 const model = defineModel<{
@@ -81,17 +82,17 @@ const handleCancel = () => {
 </script>
 
 <template>
-  <div class="max-w-2xl w-full mx-auto mt-auto mb-7 bg-background rounded-2xl
+  <div class="max-w-2xl w-full mx-auto fixed bottom-7 bg-background rounded-2xl
              outline-1 focus-within:outline-2 -outline-offset-1 focus-within:-outline-offset-2
              outline-muted-foreground/50 focus-within:outline-primary"
   >
     <!-- 输入框 -->
-    <textarea
+    <Textarea
       v-model="input"
-      class="max-h-[150px] w-full border-none shadow-none resize-none focus-visible:ring-transparent mt-1 p-2"
+      class="max-h-[150px] w-full border-none shadow-none resize-none focus-visible:ring-transparent mt-1 p-3"
       placeholder="请输入你的问题..."
       @keydown.enter.prevent="handleEnter"
-    ></textarea>
+    ></Textarea>
 
     <div class="flex items-center space-x-2 py-2 px-4">
       <!-- 上传 -->

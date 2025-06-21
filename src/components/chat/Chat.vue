@@ -247,6 +247,7 @@ const handleSaveVote = async (msgId: string, voteType: string) => {
     <ChatHeader />
 
     <div class="h-lvh w-full flex flex-col justify-center items-center">
+      <!-- 消息列表 -->
       <ChatMessages
         v-if="chatId"
         :chat-id="chatId"
@@ -254,16 +255,17 @@ const handleSaveVote = async (msgId: string, voteType: string) => {
         @like="handleSaveVote"
         @dislike="handleSaveVote"
       />
+      <!-- 初始欢迎页 -->
       <InitWelcome v-else />
-    </div>
 
-    <!-- 发送框 -->
-    <ChatSender
-      v-model:value="input"
-      :loading="loading"
-      @onSubmit="handleSubmit"
-      @onCancel="handleCancel"
-    />
+      <!-- 发送框 -->
+      <ChatSender
+        v-model:value="input"
+        :loading="loading"
+        @onSubmit="handleSubmit"
+        @onCancel="handleCancel"
+      />
+    </div>
 
     <!-- 页脚 -->
     <ChatFooter />
