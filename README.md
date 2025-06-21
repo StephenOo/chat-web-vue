@@ -1,22 +1,62 @@
 # dw-chat-web-vue
 
-## Project Setup
+Dw Chat 是一个接入 DeepSeek 大模型的极简 AI 对话页面。
 
-```sh
+该项目 dw-chat-web-vue 是由 Vue3、Vite、shadcn-vue 构建的前端工程。
+
+## 演示地址
+
+- 网页演示地址：[https://dw-chat-vue.dw1898.top](https://dw-chat-vue.dw1898.top)
+- 效果图：
+- 
+  ![dw-chat-vue.png](public/dw-chat-vue.png)
+
+## 主要技术栈
+
+1.TypeScript
+
+2.Vue3
+
+3.Vite
+
+4.shadcn-vue
+
+5.tailwind css
+
+
+## 项目系列生态
+
+Dw Chat 项目完整的生态包括以下项目版本：
+
+| 工程名称             | 描述            | GitHub 地址                                     |
+|------------------|---------------|-----------------------------------------------|
+| dw-chat-web-lite | 纯前端版工程        | https://github.com/dawei1898/dw-chat-web-lite |
+| dw-chat-web      | Next.js 前端工程  | https://github.com/dawei1898/dw-chat-web      |
+| dw-chat-web-vue  | Vue3 前端工程     | https://github.com/dawei1898/dw-chat-web-vue  |
+| dw-chat          | Java 后端工程     | https://github.com/dawei1898/dw-chat          |
+| dw-chat-next     | Next.js 全栈版工程 | https://github.com/dawei1898/dw-chat-next     |
+| dw-chat-nest     | NestJS 后端工程   | https://github.com/dawei1898/dw-chat-nest     |
+
+
+
+### 本地启动项目
+
+安装依赖
+```shell
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+启动项目
 
-```sh
+```bash
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+打开项目 http://localhost:3000
 
-```sh
-npm run build
-```
+
+
+### 本项目用到的库
 
 tailwindcss
 ```shell
