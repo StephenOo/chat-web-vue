@@ -7,7 +7,7 @@ const appName = import.meta.env.VITE_APP_NAME
   <div class="flex flex-col gap-3 mt-[20%] mb-10">
     <div class="flex justify-center items-center gap-4">
       <Avatar class="h-8 w-8 rounded-lg">
-        <AvatarImage src="src/assets/logo.svg" alt="dw" />
+        <AvatarImage src="logo.svg" alt="dw" />
       </Avatar>
 
       <span class="text-2xl font-bold"> 我是 {{appName}}，很高兴见到你！ </span>
