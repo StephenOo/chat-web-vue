@@ -70,7 +70,7 @@ const handleEnter = () => {
 
 // 提交消息
 const handleSubmit = () => {
-  emits('onSubmit',input.value, openReasoning.value, openSearch.value);
+  // emits('onSubmit',input.value, openReasoning.value, openSearch.value);
   input.value = '';
 };
 

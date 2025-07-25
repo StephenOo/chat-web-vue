@@ -37,11 +37,11 @@ const onLogout = async () => {
         <DropdownMenuTrigger as-child>
           <SidebarMenuButton class="w-30">
             <User />
-            <span>{{ user?.username }}</span>
+            <span>{{ user?.username || 'admin' }}</span>
             <ChevronsUpDown class="ml-auto size-4" />
           </SidebarMenuButton>
         </DropdownMenuTrigger>
-        <DropdownMenuContent
+        <!-- <DropdownMenuContent
           class="w-(--radix-dropdown-menu-trigger-width) min-w-40 rounded-lg"
           :side="isMobile ? 'bottom' : 'right'"
           align="end"
@@ -63,15 +63,15 @@ const onLogout = async () => {
             <LogOut />
             <span>退出</span>
           </DropdownMenuItem>
-        </DropdownMenuContent>
+        </DropdownMenuContent> -->
       </DropdownMenu>
 
       <!-- Github -->
-      <SidebarMenuButton class="w-8 h-8 ml-auto p-1 cursor-pointer">
+      <!-- <SidebarMenuButton class="w-8 h-8 ml-auto p-1 cursor-pointer">
         <a key="github_link" href="https://github.com/dawei1898/dw-chat-web-vue" target="_blank">
           <Icon icon="la:github" width="24" height="24" />
         </a>
-      </SidebarMenuButton>
+      </SidebarMenuButton> -->
 
       <!-- 切换亮暗 -->
       <ThemeToggle />

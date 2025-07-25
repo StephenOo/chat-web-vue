@@ -55,15 +55,15 @@ const router = createRouter({
   ],
 })
 
-router.beforeEach(async (to, from, next) => {
-  const publicPages = ['/login', '/test','/error/404']
-  const {isLogin} = useAuth()
+// router.beforeEach(async (to, from, next) => {
+//   const publicPages = ['/login', '/test','/error/404']
+//   const {isLogin} = useAuth()
 
-  if (!publicPages.includes(to.path) && !isLogin) {
-    return next('/login')
-  }
+//   if (!publicPages.includes(to.path) && !isLogin) {
+//     return next('/login')
+//   }
 
-  next()
-})
+//   next()
+// })
 
 export default router
