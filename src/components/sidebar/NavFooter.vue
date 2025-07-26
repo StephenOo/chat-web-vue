@@ -66,13 +66,6 @@ const onLogout = async () => {
         </DropdownMenuContent> -->
       </DropdownMenu>
 
-      <!-- Github -->
-      <!-- <SidebarMenuButton class="w-8 h-8 ml-auto p-1 cursor-pointer">
-        <a key="github_link" href="https://github.com/dawei1898/dw-chat-web-vue" target="_blank">
-          <Icon icon="la:github" width="24" height="24" />
-        </a>
-      </SidebarMenuButton> -->
-
       <!-- 切换亮暗 -->
       <ThemeToggle />
     </SidebarMenuItem>

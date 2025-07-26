@@ -7,7 +7,7 @@ chat-web-vue 是由 Vue3、Vite、shadcn-vue 构建的前端工程。
 
 - 效果图：
 - 
-  ![dw-chat-vue.png](public/dw-chat-vue.png)
+  ![chat-vue.png](public/chat-vue.png)
 
 ## 主要技术栈
 
