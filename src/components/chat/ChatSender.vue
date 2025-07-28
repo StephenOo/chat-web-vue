@@ -138,11 +138,11 @@ const handleCancel = () => {
               @click="toggleReasoning"
             >
               <Atom />
-              <span class="text-sm">深度思考</span>
+              <span class="text-sm">领导问述</span>
             </Button>
           </TooltipTrigger>
           <TooltipContent v-if="!openReasoning" side="bottom">
-            <span class="text-primary-foreground">深度思考</span>
+            <span class="text-primary-foreground">领导问述</span>
           </TooltipContent>
         </Tooltip>
       </TooltipProvider>
@@ -159,11 +159,11 @@ const handleCancel = () => {
             @click="toggleSearch"
           >
             <Globe />
-            <span>搜索</span>
+            <span>工会智语</span>
           </Button>
         </TooltipTrigger>
         <TooltipContent v-if="!openSearch" side="right">
-          <span class="text-primary-foreground">联网搜索</span>
+          <span class="text-primary-foreground">工会智语</span>
         </TooltipContent>
       </Tooltip>
 

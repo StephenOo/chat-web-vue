@@ -14,7 +14,7 @@ const appName = import.meta.env.VITE_APP_NAME
     </div>
     <div>
       <span class="text-sm text-muted-foreground">
-        我可以帮你写代码、读文件、写作各种创意内容，请把你的任务交给我吧~
+        我可以帮你解答工会的各类问题，请把你的任务交给我吧~
       </span>
     </div>
   </div>

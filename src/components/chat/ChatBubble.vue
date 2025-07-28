@@ -104,7 +104,7 @@ const onHandelDisLike = () => {
             @click="toggleThinking"
           >
             <Atom :size="16" class="mr-2" />
-            深度思考
+            领导问述
             <ChevronUp v-if="openReasoning" :size="16" class="ml-2" />
             <ChevronDown v-else :size="16" class="ml-2" />
           </Button>
